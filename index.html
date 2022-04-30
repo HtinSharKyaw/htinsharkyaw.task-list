@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div>
+    <div class="left">
+      <h2>Task List</h2>
+      <p>task</p>
+      <label for="task">Task</label><br>
+      <input type="text" id="task" name="task" placeholder="enter the task">
+      <div>
+        <button id="btn" onclick="addTask();">Add task</button>
+      </div>
+      <div>
+        <button id="btn" onclick="clearTask();">Clear task</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <textarea id="resultArea" name="resultArea" rows="4" cols="50">
+        </textarea>
+    </div>
+  </div>
+  <script>
+    function addTask() {
+      var inputValue = document.getElementById('task').value;
+      var getResult = document.getElementById('resultArea').value;
+      var showResult = document.getElementById('resultArea');
+      var totalValue =  getResult == null? '': inputValue+'\n'+ getResult; 
+      showResult.innerHTML = totalValue;
+      }
+  </script>
+</body>
+</html>
