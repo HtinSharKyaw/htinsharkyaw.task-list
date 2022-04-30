@@ -1,0 +1,16 @@
+.container{
+  border: 1px solid blue;
+  overflow: hidden;
+  width: 30%;
+}
+button{
+  width: 100%;
+}
+div.left{
+  float: left;
+}
+div.right{
+  margin-top: 16%;
+  float: right;
+
+}
